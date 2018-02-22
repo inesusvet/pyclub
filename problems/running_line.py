@@ -11,12 +11,18 @@ Lorem ipsum dolor sit amet,
 
 def running_line(text, window_size, tick):
     """
-    >>> running_line(LOREM_IPSUM, 10, 0)
-    '          '
-    >>> running_line(LOREM_IPSUM, 10, 1)
-    '         L'
+    >>> running_line(LOREM_IPSUM, 11, 0)
+    '           '
+    >>> running_line(LOREM_IPSUM, 11, 5)
+    '      Lorem'
     >>> running_line(LOREM_IPSUM, 11, 11)
     'Lorem ipsum'
+    >>> running_line(LOREM_IPSUM, 11, 22)
+    ' dolor sit '
+    >>> running_line(LOREM_IPSUM, 11, 127)
+    'aliqua.    '
+    >>> running_line(LOREM_IPSUM, 11, 138)
+    '       Lore'
     """
     return ''
 
@@ -24,7 +30,7 @@ def running_line(text, window_size, tick):
 def demo(text, window_size, sleep_time):
     ticker = 0
     while True:
-        line = running_line(text, window_size, ticker).encode('utf-8')
+        line = running_line(text, window_size, ticker)
         print line,
         time.sleep(sleep_time)
         print '\r',
@@ -33,6 +39,7 @@ def demo(text, window_size, sleep_time):
 
 if __name__ == '__main__':
     import doctest
-    doctest.testmod()
+    failures, tests = doctest.testmod()
 
-    # demo(LOREM_IPSUM, 80, 0.1)
+    if failures == 0:
+        demo(LOREM_IPSUM, 80, 0.1)
