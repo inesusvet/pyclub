@@ -14,7 +14,7 @@ u"""
     http://vojnaimir.ru/files/book2.txt
 """
 
-RUSSIAN = u'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+RUSSIAN = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя'
 
 
 def timer(func):
@@ -37,10 +37,10 @@ def from_file(filename, **kwargs):
 
 @timer
 def main(abc, key, input, output):
-    cipher = VigenereCipher(key, abc)
+    cipher = VigenereCipher(key.decode('utf'), abc.decode('utf'))
     for line in lines:
         encoded = cipher.encode(line)
-        output.write(encoded)
+        output.write(encoded.encode('utf'))
 
 
 if __name__ == '__main__':
@@ -51,6 +51,11 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     _, filename, encoding, key = sys.argv
 
-    lines = [line.encode('utf') for line in from_file(filename, encoding=encoding)]
+    lines = from_file(filename, encoding=encoding)
 
     main(RUSSIAN, key, lines, sys.stdout)
+    # import cProfile
+    # cProfile.run(
+    #     'main(RUSSIAN, key, lines, sys.stdout)',
+    #     'leostats',
+    # )
