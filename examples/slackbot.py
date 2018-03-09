@@ -1,4 +1,5 @@
 import os
+import pprint
 
 from slackclient import SlackClient
 
@@ -20,6 +21,16 @@ def main(slack_token):
     # Save user ID to detect messages addressed to the bot
     bot_id = slack_client.api_call('auth.test')['user_id']
     print 'Authorized as', bot_id
+
+    events = slack_client.rtm_read()  # Check for new messages
+    if not events:
+        print 'No new events for me'
+        return 0
+
+    else:
+        print 'Fetched', len(events), 'events'
+        for event in events:
+            pprint.pprint(event)
 
 
 if __name__ == '__main__':
