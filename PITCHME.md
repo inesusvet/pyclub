@@ -8,7 +8,7 @@ by Ivan Styazhkin @ DataRobot
 ## Why?
 > Ensure happiness and productivity of your colleagues
 
-![Give tools to the people!](https://github.com/inesusvet/pyclub/raw/slides/assets/img/tools-to-the-people.png)
+![Give tools to the people!](https://github.com/inesusvet/pyclub/raw/slides/assets/img/tools-to-the-people.jpg)
 
 ---
 ## Reference
