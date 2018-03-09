@@ -17,6 +17,10 @@ def main(slack_token):
         return 1
     print 'Connected'
 
+    # Save user ID to detect messages addressed to the bot
+    bot_id = slack_client.api_call('auth.test')['user_id']
+    print 'Authorized as', bot_id
+
 
 if __name__ == '__main__':
     slack_token = os.environ.get('SLACK_TOKEN', '<your-token-here>')
