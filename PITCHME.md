@@ -1,14 +1,14 @@
 @title[title]
 # Build your first slack bot in three hours
 
-#### by Ivan Styazhkin @ DataRobot
+by Ivan Styazhkin @ DataRobot
 
 ---
 @title[why]
 ## Why?
 > Ensure happiness and productivity of your colleagues
 
-![Give tools to the people!](https://github.com/inesusvet/pyclub/raw/master/assets/tools-to-the-people.png)
+![Give tools to the people!](https://github.com/inesusvet/pyclub/raw/master/assets/img/tools-to-the-people.png)
 
 ---
 ## Reference
