@@ -5,6 +5,15 @@ import time
 from slackclient import SlackClient
 
 
+def parse(event, bot_id):
+    if event["type"] != "message":
+        return
+    elif "subtype" in event:
+        return
+
+    return bot_id in event['text']
+
+
 def main(slack_token):
     print 'Yay!', slack_token
     # Initialize object with a token
@@ -32,7 +41,9 @@ def main(slack_token):
 
         print 'Fetched', len(events), 'events'
         for event in events:
-            pprint.pprint(event)
+            is_addressed_to_me = parse(event, bot_id)
+            if is_addressed_to_me:
+                pprint.pprint(event)
 
 
 if __name__ == '__main__':
