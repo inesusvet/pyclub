@@ -65,6 +65,7 @@ def main(slack_token):
                         'chat.postMessage',
                         channel=channel,
                         text=answer,
+                        as_user=True,
                     )
 
 
