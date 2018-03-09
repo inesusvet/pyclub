@@ -57,10 +57,15 @@ def main(slack_token):
             is_addressed_to_me = parse(event, bot_id)
             if is_addressed_to_me:
                 text = event['text']
+                channel = event['channel']
                 if detect_command(text) == 'bark':
                     print 'Bark command is detected!'
                     answer = bark(text)
-                    print answer
+                    slack_client.api_call(
+                        'chat.postMessage',
+                        channel=channel,
+                        text=answer,
+                    )
 
 
 if __name__ == '__main__':
