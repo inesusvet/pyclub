@@ -14,6 +14,11 @@ def parse(event, bot_id):
     return bot_id in event['text']
 
 
+def detect_command(message):
+    words = message.split(' ')
+    return words[0]
+
+
 def main(slack_token):
     print 'Yay!', slack_token
     # Initialize object with a token
@@ -43,7 +48,8 @@ def main(slack_token):
         for event in events:
             is_addressed_to_me = parse(event, bot_id)
             if is_addressed_to_me:
-                pprint.pprint(event)
+                if detect_command(event['text']) == 'bark':
+                    print 'Bark command is detected!'
 
 
 if __name__ == '__main__':
