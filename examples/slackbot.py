@@ -19,6 +19,14 @@ def detect_command(message):
     return words[0]
 
 
+def bark(message):
+    return 'Gav-gav! :doge:'
+
+
+def echo(message):
+    return message
+
+
 def main(slack_token):
     print 'Yay!', slack_token
     # Initialize object with a token
@@ -48,8 +56,11 @@ def main(slack_token):
         for event in events:
             is_addressed_to_me = parse(event, bot_id)
             if is_addressed_to_me:
-                if detect_command(event['text']) == 'bark':
+                text = event['text']
+                if detect_command(text) == 'bark':
                     print 'Bark command is detected!'
+                    answer = bark(text)
+                    print answer
 
 
 if __name__ == '__main__':
