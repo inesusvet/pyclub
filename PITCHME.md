@@ -13,8 +13,8 @@ by Ivan Styazhkin @ DataRobot
 ---
 ## Reference
 
-- Slack API `https://api.slack.com/methods`
-- Python Slack Client `https://github.com/slackapi/python-slackclient`
+- https://api.slack.com/methods
+- https://github.com/slackapi/python-slackclient
 
 ---
 @title[register]
@@ -28,7 +28,11 @@ https://datarobot.slack.com/apps/manage/custom-integrations
 
 - Extract an archive to directory A
 - Change work directory to the directory A
-- Execute smoke-test `venv/bin/python -c 'import slackclient; print "OK"'`
+- Execute smoke-test:
+
+```
+venv/bin/python -c 'import slackclient; print "OK"'
+```
 
 ---
 ### Bootstrap
@@ -47,7 +51,7 @@ https://datarobot.slack.com/apps/manage/custom-integrations
 ### Connect to Slack
 
 - Try to connect with `.rtm_connect()` call
-- Save user ID from `.api_call('auth.test')` call
+- Get user ID `.api_call('auth.test')` call
 - Run it!
 
 +++
@@ -66,14 +70,14 @@ https://datarobot.slack.com/apps/manage/custom-integrations
 +++
 ### Listen to events
 
-- Wrap `read()` into endless `while` cycle
+- Wrap `.rtm_read()` into endless `while` cycle
 - Run it!
 - Stop it by `Ctrl + C`
 
 ---
 ### Distinguish addressed messages
 
-- Create a function which checks substring
+- Create a function which looks for ID
 - Print out only addressed messages now
 - Test it!
 
@@ -96,7 +100,7 @@ https://datarobot.slack.com/apps/manage/custom-integrations
 ### Send answer back
 
 - Extract a channel ID from the message
-- Use `.api_call('chat.postMessage', ...)` call
+- Use `.api_call('chat.postMessage')` call
 - Test it!
 
 ---
@@ -105,7 +109,12 @@ https://datarobot.slack.com/apps/manage/custom-integrations
 - Add two more commands and new responses
 - Test it!
 
----
-# Just did it
+--
+### Invite it into a channel
 
-Hip-hip, Hooray!
+- Make sure that answers posted to the right channel
+- Test it!
+
+---
+# Hip-hip, Hooray!
+![Just did it](http://www.shirtyourpants.com/wp-content/uploads/2014/03/JUST_DID_IT.jpg)
