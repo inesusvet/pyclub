@@ -20,7 +20,7 @@ def detect_command(message):
 
 
 def bark(message):
-    return 'Gav-gav! :doge:'
+    return 'Gav-gav!'
 
 
 def main(slack_token):
@@ -42,22 +42,25 @@ def main(slack_token):
         events = slack_client.rtm_read()  # Check for new messages
         if not events:
             time.sleep(1)
-            continue
+            continue  # Sleep if there were no events for me
 
         for event in events:
-            is_addressed_to_me = parse(event, bot_id)
+            is_addressed_to_me = parse(event, bot_id)  # Detect mention
             if is_addressed_to_me:
                 text = event['text']
                 channel = event['channel']
-                if detect_command(text) == 'bark':
-                    print 'Bark command is detected!'
+                command = detect_command(text)
+                if command == 'bark':
                     answer = bark(text)
-                    slack_client.api_call(
-                        'chat.postMessage',
-                        channel=channel,
-                        text=answer,
-                        as_user=True,
-                    )
+                else:
+                    answer = ':doge:'
+
+                slack_client.api_call(
+                    'chat.postMessage',
+                    channel=channel,
+                    text=answer,
+                    as_user=True,
+                )
 
 
 if __name__ == '__main__':
