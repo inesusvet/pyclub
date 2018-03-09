@@ -119,5 +119,5 @@ venv/bin/python -c 'import slackclient; print "OK"'
 - Test it!
 
 ---
-# Hip-hip, Hooray!
-![Just did it](http://www.shirtyourpants.com/wp-content/uploads/2014/03/JUST_DID_IT.jpg)
+# Just did it
+Hip-hip, Hooray!
