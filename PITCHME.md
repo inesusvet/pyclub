@@ -1,5 +1,6 @@
 @title[title]
-# Build your first slack bot in three hours
+# Build your first slack bot
+### in three hours
 
 by Ivan Styazhkin @ DataRobot
 
