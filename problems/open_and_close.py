@@ -21,12 +21,30 @@ of characters defines an opening and closing sequence that needs balancing.
 You may assume that the second string always has an even number of characters.
 """
 
+def filter_brackets(text):
+    """
+    >>> filter_brackets('yes')
+    ''
+    >>> filter_brackets('()')
+    '()'
+    >>> filter_brackets('((yes')
+    '(('
+    """
+    result = ''
+    for char in text:
+        if char == '(' or char == ')':
+            result += char
+    return result
+
+
 def is_balanced(text):
     """
     >>> is_balanced('')
     True
     >>> is_balanced('Sensei says yes!')
     True
+    >>> is_balanced('))((')
+    False
     >>> is_balanced('(Sensei says yes!)')
     True
     >>> is_balanced('(Sensei says no!')
