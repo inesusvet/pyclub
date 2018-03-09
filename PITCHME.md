@@ -109,7 +109,7 @@ venv/bin/python -c 'import slackclient; print "OK"'
 - Add two more commands and new responses
 - Test it!
 
---
+---
 ### Invite it into a channel
 
 - Make sure that answers posted to the right channel
