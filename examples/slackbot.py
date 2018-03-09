@@ -1,5 +1,6 @@
 import os
 import pprint
+import time
 
 from slackclient import SlackClient
 
@@ -22,12 +23,13 @@ def main(slack_token):
     bot_id = slack_client.api_call('auth.test')['user_id']
     print 'Authorized as', bot_id
 
-    events = slack_client.rtm_read()  # Check for new messages
-    if not events:
-        print 'No new events for me'
-        return 0
+    while True:
+        events = slack_client.rtm_read()  # Check for new messages
+        if not events:
+            print 'No new events for me'
+            time.sleep(1)
+            continue
 
-    else:
         print 'Fetched', len(events), 'events'
         for event in events:
             pprint.pprint(event)
