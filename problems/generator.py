@@ -24,7 +24,7 @@ def lines_from_file(filename):
 
 
 def main(root, mask):
-    for filename in generate_filenames_by_creation_time(root, mask):
+    for filename in find(root, mask):
         for line in lines_from_file(filename):
             print line
 
