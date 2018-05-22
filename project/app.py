@@ -1,11 +1,11 @@
 import flask
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, template_folder='.')
 
 
 @app.route('/')
 def index():
-    return 'Hello, world'
+    return flask.render_template('index.html')
 
 
 @app.route('/<slug>')
