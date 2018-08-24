@@ -13,15 +13,21 @@ The input will always be in lowercase and never be empty.
 """
 
 def words_to_marks(word):
+    """
+    >>> words_to_marks('attitude')
+    100
+    >>> words_to_marks('friends')
+    75
+    >>> words_to_marks('family')
+    66
+    >>> words_to_marks('selfness')
+    99
+    >>> words_to_marks('knowledge')
+    96
+    """
     return 0
 
 
-def test():
-    assert words_to_marks('attitude') == 100, 'attitude should equal 100'
-    assert words_to_marks('friends') == 75, 'friends should equal 75'
-    assert words_to_marks('family') == 66, 'family should equal 66'
-    assert words_to_marks('selfness') == 99, 'selfness should equal 99'
-    assert words_to_marks('knowledge'), 96, 'knowledge should equal 96'
-
-
-test()
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
