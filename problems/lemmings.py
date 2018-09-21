@@ -5,6 +5,8 @@ See https://www.codewars.com/kata/lemmings-battle
 
 def is_alive(power):
     """
+    Отвечает на вопрос: жив ли лемминг?
+
     >>> is_alive(0)
     False
     >>> is_alive(100)
@@ -16,6 +18,8 @@ def is_alive(power):
 
 def triage(warriors):
     """
+    Отбирает только выживших леммингов после раунда боев.
+
     >>> triage([10, 0, 5, -2])
     [10, 5]
     """
@@ -23,6 +27,8 @@ def triage(warriors):
 
 def fight(green, blue):
     """
+    Отвечает на вопрос: сколько силы останется у двух леммингов после их боя?
+
     >>> fight(10, 10)
     (0, 0)
     >>> fight(12, 10)
@@ -34,6 +40,9 @@ def fight(green, blue):
 
 def round(green, blue):
     """
+    Проводит раунд боев между двумя группами леммингов.
+    Количество элементов в каждой группе всегда одинаковое.
+
     >>> round([1, 2, 3], [3, 2, 1])
     [(-2, 0, 2), (2, 0, -2)]
     >>> round([10], [5])
@@ -43,6 +52,8 @@ def round(green, blue):
 
 def draw(army, size):
     """
+    Выбирает из армии нескольких самых сильных леммингов.
+
     >>> draw([1, 2, 3, 4, 5], 3)
     [5, 4, 3]
     >>> draw([10, 1, 2], 2)
@@ -54,6 +65,8 @@ def draw(army, size):
 
 def collect(army, warriors):
     """
+    Возвращает в армию леммингов, выживших после раунда боев.
+
     >>> collect([], [1, 2, 3])
     [1, 2, 3]
     >>> collect([10, 9, 8, 7], [1, 2, 3])
@@ -62,7 +75,9 @@ def collect(army, warriors):
 
 
 def lemming_battle(battlefield, green, blue):
-    pass
+    """
+    Проводит войну между двумя армиями леммингов на заданном количестве полей.
+    """
 
 
 def test():
