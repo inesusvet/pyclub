@@ -1,3 +1,4 @@
+#! -*- coding: utf-8 -*-
 
 def compress_string(text):
     """
@@ -19,4 +20,3 @@ def compress_string(text):
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-
