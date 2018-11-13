@@ -31,16 +31,14 @@ def timer(func):
 
 def from_file(filename, **kwargs):
     with codecs.open(filename, 'r', **kwargs) as file_obj:
-        for line in file_obj:
-            yield line
+        return file_obj.read()
 
 
 @timer
-def main(abc, key, input, output):
+def main(abc, key, text, output):
     cipher = VigenereCipher(key.decode('utf'), abc.decode('utf'))
-    for line in lines:
-        encoded = cipher.encode(line)
-        output.write(encoded.encode('utf'))
+    encoded = cipher.encode(text)
+    output.write(encoded.encode('utf'))
 
 
 if __name__ == '__main__':
@@ -51,9 +49,9 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     _, filename, encoding, key = sys.argv
 
-    lines = from_file(filename, encoding=encoding)
+    text = from_file(filename, encoding=encoding)
 
-    main(RUSSIAN, key, lines, sys.stdout)
+    main(RUSSIAN, key, text, sys.stdout)
     # import cProfile
     # cProfile.run(
     #     'main(RUSSIAN, key, lines, sys.stdout)',
