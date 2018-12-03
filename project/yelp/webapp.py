@@ -4,7 +4,7 @@ from datetime import date
 
 from flask import Flask, redirect, request
 
-from .main import load_feedback, save_feedback, add_comment, search_for_date
+from main import load_feedback, save_feedback, add_comment, search_for_date
 
 app = Flask(__name__)
 
@@ -34,7 +34,8 @@ def submit():
     author = data.get('author', '')
     result = 'Hate! ' + comment if 'hate' in data else 'Like! ' + comment
     save_new_comment(author, result)
-    return 'Thank you for your piece of feedback! <3'
+    with open('thanks.html') as file_obj:
+        return file_obj.read()
 
 
 @app.route('/daily')
