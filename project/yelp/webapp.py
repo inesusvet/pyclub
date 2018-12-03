@@ -32,6 +32,8 @@ def submit():
 
     comment = data.get('comment', '')
     author = data.get('author', '')
+    if not author:
+        author = 'Anonymous'
     result = 'Hate! ' + comment if 'hate' in data else 'Like! ' + comment
     save_new_comment(author, result)
     with open('thanks.html') as file_obj:
