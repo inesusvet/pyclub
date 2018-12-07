@@ -1,5 +1,6 @@
 import os
 
+import codecs
 from datetime import date
 
 from flask import Flask, redirect, request
@@ -42,15 +43,15 @@ def submit():
 
 @app.route('/daily')
 def daily():
-    with open('daily.html') as file_obj:
+    with codecs.open('daily.html', encoding='utf-8') as file_obj:
         TEMPLATE = file_obj.read()
 
     today = date.today()
     all_feedback = load_feedback(FILENAME)
     today_comments = search_for_date(all_feedback, today)
-    result = ''
+    result = u''
     for item in today_comments:
-        result += '<li>{}: {}</li>'.format(item['author'], item['comment'])
+        result += u'<li>{}: {}</li>'.format(item['author'], item['comment'])
 
     return TEMPLATE.format(result)
 
