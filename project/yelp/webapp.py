@@ -1,7 +1,7 @@
 import os
 
 import codecs
-from datetime import date
+from datetime import date, timedelta
 
 from flask import Flask, redirect, request
 
@@ -52,6 +52,9 @@ def daily():
     result = u''
     for item in today_comments:
         result += u'<li>{}: {}</li>'.format(item['author'], item['comment'])
+
+    if result == u'':
+        return TEMPLATE.format('Sorry, there are no comments yet :(')
 
     return TEMPLATE.format(result)
 
