@@ -59,6 +59,30 @@ def daily():
     return TEMPLATE.format(result)
 
 
+@app.route('/weekly')
+def weekly():
+    all_feedback = load_feedback(FILENAME)
+    result = []
+
+    one_week_ago = date.today() - timedelta(days=7)
+    for offset in range(8):
+        day = one_week_ago + timedelta(days=offset)
+        this_week_comments = search_for_date(all_feedback, day)
+        for item in this_week_comments:
+            result_string = u'<li>{2}: {0} - {1}</li>'.format(
+                item['author'],
+                item['comment'],
+                item['added_at'][:10],
+            )
+            result.append(result_string)
+
+    with codecs.open('daily.html', encoding='utf-8') as file_obj:
+        TEMPLATE = file_obj.read()
+    if result == []:
+        return TEMPLATE.format('Sorry, there are no comments for this week :(')
+    return TEMPLATE.format(''.join(result[::-1]))
+
+
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
