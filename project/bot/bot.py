@@ -35,11 +35,14 @@ if __name__ == '__main__':
 
     _, transport_name, token = sys.argv[:3]
 
-    logging.basicConfig(level=logging.DEBUG)
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s\t%(levelname)s\t%(message)s'
+    )
 
     if transport_name == 'telegram':
-        import telegram
-        transport = telegram.open(token)
+        import telega
+        transport = telega.open(token)
     elif transport_name == 'slack':
         import slack
         transport = slack.open(token)
@@ -48,9 +51,11 @@ if __name__ == '__main__':
     out_queue = collections.deque()
 
     try:
-        return_code = main(transport, in_queue, out_queue)
+        main(transport, in_queue, out_queue)
     except KeyboardInterrupt:
         logger.error('Stopping the process by KeyboardInterrupt')
+        transport.close()
+
     except Exception as ex:
         logger.exception('Fatal failure')
         exit(1)
