@@ -1,6 +1,7 @@
 import collections
 import logging
 import sys
+import time
 
 import brain
 
@@ -11,13 +12,21 @@ def main(transport, incoming, outgoing):
     logger.info('Staring infinite loop')
     while True:
         new_messages = transport.read()
+        if not new_messages:
+            logger.debug('No new messages. Sleeping five seconds')
+            time.sleep(5)
+            continue
+
         incoming.extend(new_messages)
+        logger.debug('Passing %d messages to the Inbox', len(incoming))
 
         brain.process(incoming, outgoing)
 
+        logger.debug('Passing %d messages to the Send', len(outgoing))
         while len(outgoing) > 0:
-            to_send = outgoing.pop(0)
-            transport.write(to_send)
+            message = outgoing.popleft()
+            logger.debug('Sending a message: %s', message.text)
+            transport.write(message)
 
 
 if __name__ == '__main__':
@@ -26,14 +35,14 @@ if __name__ == '__main__':
 
     _, transport_name, token = sys.argv[:3]
 
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=logging.DEBUG)
 
     if transport_name == 'telegram':
         import telegram
-        transport = telegram.get_transport(token)
+        transport = telegram.open(token)
     elif transport_name == 'slack':
         import slack
-        transport = slack.get_transport(token)
+        transport = slack.open(token)
 
     in_queue = collections.deque()
     out_queue = collections.deque()
