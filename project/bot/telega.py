@@ -7,16 +7,14 @@ logger = logging.getLogger(__name__)
 
 
 class TelegramAPI(object):
-    def __init__(self, bot):
-        self.bot = bot
-        self.last_update_id = 0
+    def __init__(self, transport):
+        self.transport = transport
+        self.last_update_id = None
 
     def read(self, limit=0):
-        updates = self.bot.get_updates(offset=self.last_update_id)
-        if not updates:
-            return []
-
-        self.last_update_id = max(up.update_id for up in updates) + 1
+        updates = self.transport.get_updates(offset=self.last_update_id)
+        if updates:
+            self.last_update_id = max(up.update_id for up in updates) + 1
 
         messages = [
             Message(update.message.chat.id, update.message.text)
@@ -27,7 +25,7 @@ class TelegramAPI(object):
 
     def write(self, message):
         logger.debug('Sending a message to telegram %r', message)
-        self.bot.send_message(
+        self.transport.send_message(
             message.channel,
             message.text,
         )

@@ -8,6 +8,7 @@ logger = logging.getLogger(__name__)
 class SlackAPI(object):
     def __init__(self, transport):
         self.transport = transport
+        # Won't receive any messages if not authorized
         self.bot_id = self.transport.api_call('auth.test')['user_id']
 
     def read(self, limit=0):
