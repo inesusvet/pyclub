@@ -13,19 +13,16 @@ class TelegramAPI(object):
 
     def read(self, limit=0):
         updates = self.bot.get_updates(offset=self.last_update_id)
+        if not updates:
+            return []
 
-        messages = []
-        for update in updates:
-            logger.debug('Getting an update: %s', update)
-            self.last_update_id = update.update_id
-            if not update.message:
-                continue
+        self.last_update_id = max(up.update_id for up in updates) + 1
 
-            channel = update.message.chat.id
-            text = update.message.text
-            messages.append(Message(channel, text))
-
-        self.last_update_id += 1
+        messages = [
+            Message(update.message.chat.id, update.message.text)
+            for update in updates
+            if update.message
+        ]
         return messages
 
     def write(self, message):
