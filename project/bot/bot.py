@@ -54,7 +54,6 @@ if __name__ == '__main__':
         main(transport, in_queue, out_queue)
     except KeyboardInterrupt:
         logger.error('Stopping the process by KeyboardInterrupt')
-        transport.close()
 
     except Exception as ex:
         logger.exception('Fatal failure')
