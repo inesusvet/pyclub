@@ -7,48 +7,37 @@ logger = logging.getLogger(__name__)
 
 
 class TelegramAPI(object):
-    def __init__(self, updater):
-        self.updater = updater
-        self.buffer = collections.deque()
-
-    def on_message(self, message):
-        logger.info('Saving message to buffer: %s', message)
-        self.buffer.append(message)
+    def __init__(self, bot):
+        self.bot = bot
+        self.last_update_id = 0
 
     def read(self, limit=0):
-        messages = []
-        while len(self.buffer):
-            logger.info('Getting message from buffer')
-            update = self.buffer.popleft()
+        updates = self.bot.get_updates(offset=self.last_update_id)
 
-            channel = update['chat']['id']
-            text = update['text']
+        messages = []
+        for update in updates:
+            logger.debug('Getting an update: %s', update)
+            self.last_update_id = update.update_id
+            if not update.message:
+                continue
+
+            channel = update.message.chat.id
+            text = update.message.text
             messages.append(Message(channel, text))
 
+        self.last_update_id += 1
         return messages
 
     def write(self, message):
-        logger.info('Sending a message to telegram %r', message)
-        self.updater.bot.send_message(
+        logger.debug('Sending a message to telegram %r', message)
+        self.bot.send_message(
             message.channel,
             message.text,
         )
 
-    def close(self):
-        self.updater.stop()
-
 
 def open(token):
-    from telegram.ext import Updater, MessageHandler
+    import telegram
 
-    updater = Updater(token)
-    transport = TelegramAPI(updater)
-
-    def callback(bot, update):
-        transport.on_message(update.message)
-
-    updater.dispatcher.add_handler(MessageHandler([], callback))
-
-    updates = updater.start_polling(poll_interval=0.5, bootstrap_retries=0)
-
-    return transport
+    client = telegram.Bot(token)
+    return TelegramAPI(client)

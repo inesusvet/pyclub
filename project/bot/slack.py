@@ -28,9 +28,6 @@ class SlackAPI(object):
             as_user=True,
         )
 
-    def close(self):
-        pass
-
 
 def open(token):
     import slackclient
