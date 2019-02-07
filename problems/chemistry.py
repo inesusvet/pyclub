@@ -78,3 +78,9 @@ def tokenize(text):
     ['H2', 'O']
     """
     return []
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
+ 
