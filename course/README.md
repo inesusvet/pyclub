@@ -99,17 +99,39 @@ type(), dir(), help()
 '1d 3h 55m 0s'
 ```
 
-1. How does _class_ look like?
+1. How could I check if _a dictionary_ has a key? What about defaults?
+
+```
+>>> '' in grades
+False
+>>> grades.get('Lukin', 3)  # method call
+3
+```
+
+1. How could I iterate over all keys & values from _a dictionary_?
+
+```
+>>> for name, grade in grades.items():
+...     print name, grade
+...
+Pupkin 2
+Skomorohova 5
+Styazhkin 4
+Putin 100500
+Kovrov 5
+```
+
+1. How does _class_ definition look like?
 
 ```python
 class Person:
     organization = 'space'
 
-    def __init__(self, first_name, last_name):
+    def __init__(self, first_name, last_name):  # constructor
         self.first_name = first_name
         self.last_name = last_name
 
-    def get_full_name(self):
+    def get_full_name(self):  # method definition
         return '{} {}'.format(self.first_name, self.last_name)
 ```
 
@@ -119,7 +141,7 @@ class Person:
 >>> me = Person('Ivan', 'Styazhkin')
 >>> me.organization
 'space'
->>> me.get_full_name()
+>>> me.get_full_name()  # method call
 'Ivan Styazhkin'
 >>> brother = Person('Vasily', 'Styazhkin')
 >>> brother.name
