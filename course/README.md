@@ -101,7 +101,7 @@ type(), dir(), help()
 
 > How could I check if _a dictionary_ has a key? What about defaults?
 
-```
+```python
 >>> '' in grades
 False
 >>> grades.get('Lukin', 3)  # method call
@@ -110,7 +110,7 @@ False
 
 > How could I iterate over all keys & values from _a dictionary_?
 
-```
+```python
 >>> for name, grade in grades.items():
 ...     print name, grade
 ...
@@ -152,7 +152,7 @@ class Person:
 
 > How does generator function look like?
 
-```
+```python
 >>> import time
 >>> def final_countdown():
 ...     yield 5
