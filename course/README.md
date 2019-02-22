@@ -1,6 +1,6 @@
 # Cheatsheet on python syntax
 
-1. How to create a variable for an _integer_?
+> How to create a variable for an _integer_?
 
 ```python
 >>> one = 1
@@ -8,7 +8,7 @@
 3
 ```
 
-1. How to create a variable for a _float number_?
+> How to create a variable for a _float number_?
 
 ```python
 >>> number = 2.5
@@ -16,7 +16,7 @@
 6.25
 ```
 
-1. How to create a variable for a _string_?
+> How to create a variable for a _string_?
 
 ```python
 >>> text = 'James Bond 007'
@@ -33,7 +33,7 @@
 '100500'
 ```
 
-1. How could I crate _a list_ of string values?
+> How could I crate _a list_ of string values?
 
 ```python
 >>> l = ['apple', 'pear', 'grape']
@@ -46,7 +46,7 @@
 ['apple', 'batman', 'grape']
 ```
 
-1. How could I create _a list_ of characters from a string?
+> How could I create _a list_ of characters from a string?
 
 ```python
 >>> chars = list('python')
@@ -54,7 +54,7 @@
 ['p', 'y', 't', 'h', 'o', 'n', 'i', 's', 't']
 ```
 
-1. How could I create _a dictionary_ with strings as keys and numbers as values?
+> How could I create _a dictionary_ with strings as keys and numbers as values?
 
 ```python
 >>> grades = {'Styazhkin': 4, 'Skomorohova': 5, 'Kovrov': 5, 'Pupkin': 2}
@@ -65,13 +65,13 @@
 {'Pupkin': 2, 'Skomorohova': 5, 'Styazhkin': 4, 'Putin': 100500, 'Kovrov': 5}
 ```
 
-1. How to learn about the tools?
+> How to learn about the tools?
 
 ```python
 type(), dir(), help()
 ```
 
-1. How does _a function_ look like?
+> How does _a function_ look like?
 
 ```python
 >>> def humanize(time_in_seconds):
@@ -92,14 +92,14 @@ type(), dir(), help()
 ...
 ```
 
-1. How does _a function call_ look like?
+> How does _a function call_ look like?
 
 ```python
 >>> h = humanize(100500)
 '1d 3h 55m 0s'
 ```
 
-1. How could I check if _a dictionary_ has a key? What about defaults?
+> How could I check if _a dictionary_ has a key? What about defaults?
 
 ```
 >>> '' in grades
@@ -108,7 +108,7 @@ False
 3
 ```
 
-1. How could I iterate over all keys & values from _a dictionary_?
+> How could I iterate over all keys & values from _a dictionary_?
 
 ```
 >>> for name, grade in grades.items():
@@ -121,7 +121,7 @@ Putin 100500
 Kovrov 5
 ```
 
-1. How does _class_ definition look like?
+> How does _class_ definition look like?
 
 ```python
 class Person:
@@ -135,7 +135,7 @@ class Person:
         return '{} {}'.format(self.first_name, self.last_name)
 ```
 
-1. How to create an object of my class?
+> How to create an object of my class?
 
 ```python
 >>> me = Person('Ivan', 'Styazhkin')
@@ -150,7 +150,7 @@ class Person:
 'space'
 ```
 
-1. How does generator function look like?
+> How does generator function look like?
 
 ```
 >>> import time
@@ -178,7 +178,7 @@ class Person:
 Ka-boom!
 ```
 
-1. How to do math calculations?
+> How to do math calculations?
 
 ```python
 >>> import math
