@@ -150,6 +150,34 @@ class Person:
 'space'
 ```
 
+1. How does generator function look like?
+
+```
+>>> import time
+>>> def final_countdown():
+...     yield 5
+...     time.sleep(1)
+...     yield 4
+...     time.sleep(1)
+...     yield 3
+...     time.sleep(1)
+...     yield 2
+...     time.sleep(1)
+...     yield 1
+...     time.sleep(1)
+...     print 'Ka-boom!'
+...
+>>> for counter in final_countdown():
+...     print counter
+...
+5
+4
+3
+2
+1
+Ka-boom!
+```
+
 1. How to do math calculations?
 
 ```python
