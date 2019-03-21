@@ -1,5 +1,13 @@
 """
-See the full table at http://www.hemi.nsu.ru/mends.htm
+Your task is to build a function which take molecula's formula and will return it's molar mass.
+See https://en.wikipedia.org/wiki/Molar_mass
+
+The total mass of the molecula can be calculated as a sum of relative atomic masses of all its atoms.
+For the sake of simplicity, let's assume that relative atomic mass of any atom is an integer.
+
+Formulas will contain only valid chemical symbols and numbers meaning amount of the atom in the molekula.
+
+See the full M-table at http://www.hemi.nsu.ru/mends.htm
 """
 
 import string
