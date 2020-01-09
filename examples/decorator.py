@@ -31,5 +31,5 @@ def spam(name, retries=5):
 
 if __name__ == '__main__':
   spam('Ivan')
-  spam('Boris', retry=0)
+  spam('Boris', retries=0)
   spam('Vitaly')
