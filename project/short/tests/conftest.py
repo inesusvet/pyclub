@@ -10,11 +10,10 @@ print "Hello from conftest"
 @pytest.fixture(scope="session", autouse=True)
 def storage_patch():
     print "Hello from fixture"
-    original = storage.DATABASE
-    storage.DATABASE = 'test'
+    original = storage.TEST_DB
+    storage.TEST_DB = storage.MemoryDataBase()
 
     yield None
 
     print "Bye-bye from fixture"
-    storage.DATABASE = original
-    os.remove('test.db')
+    storage.TEST_DB = original

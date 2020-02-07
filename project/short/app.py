@@ -43,7 +43,6 @@ def to_short():
 
 @app.route('/<slug>')
 def redirect_to_original(slug):
-    print slug
     number = core.decode(slug)
     original_link = storage.get(number)
     return redirect("http://%s" % original_link)
