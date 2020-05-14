@@ -1,6 +1,3 @@
-import json
-
-
 def split_by(sequence, chunk_size=10):
     """
     >>> split_by([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 2)
