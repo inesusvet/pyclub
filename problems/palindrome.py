@@ -20,6 +20,23 @@ def is_palindrome(string):
     return
 
 
+def is_palindrome_ingoring_case_and_non_letter_chars(text):
+    """
+    >>> is_palindrome("anna")
+    True
+    >>> is_palindrome("madam")
+    True
+    >>> is_palindrome("foobar")
+    False
+    >>> is_palindrome("anna:)")
+    True
+    >>> is_palindrome("Anna")
+    True
+    >>> is_palindrome("Race car!")
+    True
+    """
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
