@@ -144,7 +144,7 @@ class Person:
 >>> me.get_full_name()  # method call
 'Ivan Styazhkin'
 >>> brother = Person('Vasily', 'Styazhkin')
->>> brother.name
+>>> brother.first_name
 'Vasily'
 >>> brother.organization
 'space'
