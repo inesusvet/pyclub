@@ -8,7 +8,7 @@ def main(numbers):
 
     Follow up: Your solution should run in O(log n) time and O(1) space.
 
-    >>> main([1, 1, 2, 2, 3, 3, 4, 4, 8, 8])
+    >>> main([1, 1, 2, 3, 3, 4, 4, 8, 8])
     2
     >>> main([3, 3, 7, 7, 10, 11, 11])
     10
