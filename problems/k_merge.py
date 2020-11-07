@@ -1,5 +1,7 @@
 def k_merge(*args):
     """
+    See https://leetcode.com/problems/merge-k-sorted-lists/
+
     Given an arbitrary number of sorted lists, build a merged sorted list.
 
     >>> k_merge()
