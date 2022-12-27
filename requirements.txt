@@ -1,2 +1,2 @@
 jupyter==1.0.0
-setuptools==43.0.0
+setuptools==65.5.1
