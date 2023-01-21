@@ -13,13 +13,14 @@
 1. [https://leetcode.com/problems/search-in-rotated-sorted-array/](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 1. [https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 1. [https://leetcode.com/problems/search-in-rotated-sorted-array-ii/](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
+1. [https://leetcode.com/problems/single-element-in-a-sorted-array/](https://leetcode.com/problems/single-element-in-a-sorted-array/)
 
 ### Hash table
 1. [https://leetcode.com/problems/single-number/](https://leetcode.com/problems/single-number/)
 1. [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
 1. [https://leetcode.com/problems/4sum/](https://leetcode.com/problems/4sum/)
 1. [https://leetcode.com/problems/group-anagrams/](https://leetcode.com/problems/group-anagrams/)
-1. [https://leetcode.com/problems/valid-anagram/](https://leetcode.com/problems/valid-anagram/) 
+1. [https://leetcode.com/problems/valid-anagram/](https://leetcode.com/problems/valid-anagram/)
 1. [https://leetcode.com/problems/find-all-anagrams-in-a-string/](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 
 ### Queue and Stack
@@ -56,3 +57,14 @@
 1. [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 1. [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 1. [https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+
+### Dynamic programming
+1. [https://leetcode.com/problems/longest-palindromic-substring/](https://leetcode.com/problems/longest-palindromic-substring/)
+1. [https://leetcode.com/problems/longest-valid-parentheses/](https://leetcode.com/problems/longest-valid-parentheses/)
+1. [https://leetcode.com/problems/decode-ways/](https://leetcode.com/problems/decode-ways/)
+1. [https://leetcode.com/problems/word-break/](https://leetcode.com/problems/word-break/)
+1. [https://leetcode.com/problems/continuous-subarray-sum/](https://leetcode.com/problems/continuous-subarray-sum/)
+1. [https://leetcode.com/problems/best-time-to-buy-and-sell-stock/](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+1. [https://leetcode.com/problems/range-sum-query-immutable/](https://leetcode.com/problems/range-sum-query-immutable/)
+1. [https://leetcode.com/problems/n-queens/](https://leetcode.com/problems/n-queens/)
+1. [https://leetcode.com/problems/coin-change/](https://leetcode.com/problems/coin-change/)
