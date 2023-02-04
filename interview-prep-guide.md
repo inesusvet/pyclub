@@ -5,6 +5,28 @@
 1. [https://leetcode.com/problems/linked-list-cycle/](https://leetcode.com/problems/linked-list-cycle/)
 1. [https://leetcode.com/problems/add-two-numbers/](https://leetcode.com/problems/add-two-numbers/)
 1. [https://leetcode.com/problems/reverse-linked-list/](https://leetcode.com/problems/reverse-linked-list/)
+1. [https://leetcode.com/problems/merge-two-sorted-lists/](https://leetcode.com/problems/merge-two-sorted-lists/)
+1. [https://leetcode.com/problems/copy-list-with-random-pointer/](https://leetcode.com/problems/copy-list-with-random-pointer/)
+1. [https://leetcode.com/problems/reorder-list/](https://leetcode.com/problems/reorder-list/)
+
+### Arrays and strings
+1. [https://leetcode.com/problems/longest-substring-without-repeating-characters/](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+1. [https://leetcode.com/problems/roman-to-integer/](https://leetcode.com/problems/roman-to-integer/)
+1. [https://leetcode.com/problems/remove-duplicates-from-sorted-list/](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
+1. [https://leetcode.com/problems/multiply-strings/](https://leetcode.com/problems/multiply-strings/)
+1. [https://leetcode.com/problems/add-binary](https://leetcode.com/problems/add-binary)
+1. [https://leetcode.com/problems/merge-sorted-array/](https://leetcode.com/problems/merge-sorted-array/)
+1. [https://leetcode.com/problems/integer-to-english-words](https://leetcode.com/problems/integer-to-english-words)
+1. [https://leetcode.com/problems/subarray-sum-equals-k](https://leetcode.com/problems/subarray-sum-equals-k)
+1. [https://leetcode.com/problems/string-to-integer-atoi/](https://leetcode.com/problems/string-to-integer-atoi/)
+1. [https://leetcode.com/problems/3sum/](https://leetcode.com/problems/3sum/)
+1. [https://leetcode.com/problems/next-permutation/](https://leetcode.com/problems/next-permutation/)
+1. [https://leetcode.com/problems/minimum-window-substring/](https://leetcode.com/problems/minimum-window-substring/)
+1. [https://leetcode.com/problems/valid-palindrome/](https://leetcode.com/problems/valid-palindrome/)
+1. [https://leetcode.com/problems/valid-palindrome-ii/](https://leetcode.com/problems/valid-palindrome-ii/)
+1. [https://leetcode.com/problems/product-of-array-except-self/](https://leetcode.com/problems/product-of-array-except-self/)
+1. [https://leetcode.com/problems/move-zeroes/](https://leetcode.com/problems/move-zeroes/)
+1. [https://leetcode.com/problems/validate-ip-address/](https://leetcode.com/problems/validate-ip-address/)
 
 ### Binary search
 1. [https://leetcode.com/problems/binary-search/](https://leetcode.com/problems/binary-search/)
@@ -30,8 +52,35 @@
 1. [https://leetcode.com/problems/number-of-islands/](https://leetcode.com/problems/number-of-islands/)
 1. [https://leetcode.com/problems/remove-invalid-parentheses/](https://leetcode.com/problems/remove-invalid-parentheses/)
 
-### Sorting
+### Trees and Graphs
+1. [https://leetcode.com/problems/validate-binary-search-tree/](https://leetcode.com/problems/validate-binary-search-tree/)
+1. [https://leetcode.com/problems/binary-tree-maximum-path-sum/](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+1. [https://leetcode.com/problems/binary-tree-right-side-view/](https://leetcode.com/problems/binary-tree-right-side-view/)
+1. [https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+1. [https://leetcode.com/problems/diameter-of-binary-tree/](https://leetcode.com/problems/diameter-of-binary-tree/)
+1. [https://leetcode.com/problems/flatten-binary-tree-to-linked-list/](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
+1. [https://leetcode.com/problems/clone-graph/](https://leetcode.com/problems/clone-graph/)
+1. [https://leetcode.com/problems/binary-tree-paths/](https://leetcode.com/problems/binary-tree-paths/)
+1. [https://leetcode.com/problems/accounts-merge/](https://leetcode.com/problems/accounts-merge/)
+1. [https://leetcode.com/problems/is-graph-bipartite/](https://leetcode.com/problems/is-graph-bipartite/)
+
+### Sorting and Searching
 1. [https://leetcode.com/problems/merge-intervals/](https://leetcode.com/problems/merge-intervals/)
+1. [https://leetcode.com/problems/divide-two-integers/](https://leetcode.com/problems/divide-two-integers/)
+1. [https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+1. [https://leetcode.com/problems/first-bad-version/](https://leetcode.com/problems/first-bad-version/)
+1. [https://leetcode.com/problems/powx-n/](https://leetcode.com/problems/powx-n/)
+1. [https://leetcode.com/problems/find-peak-element/](https://leetcode.com/problems/find-peak-element/)
+1. [https://leetcode.com/problems/intersection-of-two-arrays/](https://leetcode.com/problems/intersection-of-two-arrays/)
+1. [https://leetcode.com/problems/intersection-of-two-arrays-ii/](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
+
+### Recursion
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+https://leetcode.com/problems/permutations/
+https://leetcode.com/problems/permutations-ii/
+https://leetcode.com/problems/remove-invalid-parentheses/
+https://leetcode.com/problems/subsets/
+https://leetcode.com/problems/regular-expression-matching/
 
 ### Heap and Hash map
 1. [https://leetcode.com/problems/top-k-frequent-words/](https://leetcode.com/problems/top-k-frequent-words/)
