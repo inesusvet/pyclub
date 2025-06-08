@@ -1,5 +1,7 @@
 def main(numbers):
     """
+    See https://leetcode.com/problems/product-of-array-except-self/description/
+    
     Given a sequence of integers. Build a new sequence of the same length. Each element of a new
     sequence should be calculated as a multiplication of elements of the original sequence except
     the element with the same index.  Think about possible corner cases.
